@@ -2,3 +2,4 @@ node_modules/
 .qodo
 .env
 /public/images
+node_modules/
