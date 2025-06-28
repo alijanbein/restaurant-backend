@@ -25,19 +25,20 @@ const orderAndTableSessionRoutes = require("./routes/orderAndTableSessionRoutes"
 const settingsRoutes = require("./routes/settingsRoutes");
 
 const app = express();
+app.use(cors());
 
-app.use(
-  cors({
-    origin: (origin, callback) => {
-      if (!origin || origin.startsWith("http://localhost")) {
-        callback(null, true);
-      } else {
-        callback(new Error("Not allowed by CORS"));
-      }
-    },
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: (origin, callback) => {
+//       if (!origin || origin.startsWith("http://localhost")) {
+//         callback(null, true);
+//       } else {
+//         callback(new Error("Not allowed by CORS"));
+//       }
+//     },
+//     credentials: true,
+//   })
+// );
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
