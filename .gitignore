@@ -1,5 +1,5 @@
 node_modules/
 .qodo
 .env
-/public/images
+# /public/images
 node_modules/
