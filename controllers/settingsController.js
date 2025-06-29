@@ -12,7 +12,7 @@ exports.getSettingsByBranchId = async (req, res) => {
 };
 exports.getAllSettingsByBranchId = async (req, res) => {
   try {
-    const value = await Settings.findAll();
+    const value = await Settings.findAll();    
     res.status(200).json({ value });
   } catch (error) {
     res.status(500).json({ message: "Failed to fetch settings: ", error });
